@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from individual.views import landing, FormularioRegistroView, Ingreso, UsuariosRestringidaView, AreaRestringidaView
+from individual.views import landing, FormularioRegistroView, Ingreso, UsuariosRestringidaView, AreaRestringidaView, RegistroView
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('formulario/',FormularioRegistroView.as_view(), name='Formulario'),
     path('login/',Ingreso.as_view(), name='Login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('restringido/', AreaRestringidaView.as_view(), name='Restringido')
+    path('restringido/', AreaRestringidaView.as_view(), name='Restringido'),
+    path('registro/',RegistroView.as_view(), name= 'Registro') 
 
 ]
