@@ -16,7 +16,11 @@
                 <h1>Wizard</h1>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p class="lead">
+                    {% if user.is_authenticated %}
+                    <h1> Bienvenido {{ user.first_name }} {{ user.last_name }} </h1>
+                    {% else %}
                     <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white" style="color:black">Learn more</a>
+                    {% endif %}
                 </p>
             </main>
         </section>

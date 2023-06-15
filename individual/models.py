@@ -10,3 +10,8 @@ class Registromodel(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+    class Meta:
+            permissions = [
+                ('puede_ver_usuarios', 'Permiso para ver usuarios')
+            ]
