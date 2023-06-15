@@ -75,7 +75,7 @@ class Ingreso(TemplateView):
         else:
             return render(request, self.template_name, { "form": form })
         
-class AreaRestringidaView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
+class UsuariosRestringidaView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     template_name = 'usuarios.html'
     permission_required = 'individual.puede_ver_usuarios'
 
@@ -90,3 +90,16 @@ class AreaRestringidaView(PermissionRequiredMixin, LoginRequiredMixin, TemplateV
         if titulo is None:
             return redirect('landing')
         return super().get(request, *args, **kwargs)
+    
+
+class AreaRestringidaView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
+    template_name = 'restringido.html'
+    permission_required = 'individual.puede_ver_pagina'
+    def get(self, request, *args, **kwargs):
+        titulo = "Restringido"
+        contexto = {
+        'titulo': titulo,
+        }
+        if titulo is None:
+            return redirect('landing')
+        return render(request, self.template_name, contexto)

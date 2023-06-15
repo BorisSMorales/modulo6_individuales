@@ -13,5 +13,6 @@ class Registromodel(models.Model):
     
     class Meta:
             permissions = [
-                ('puede_ver_usuarios', 'Permiso para ver usuarios')
+                ('puede_ver_usuarios', 'Permiso para ver usuarios'),
+                ('puede_ver_pagina', 'Permiso para ver pagina')
             ]
