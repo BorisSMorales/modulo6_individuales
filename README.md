@@ -1,17 +1,6 @@
 #modulo6_individuales
 
-ACTIVIDAD 5 En la aplicación actual tiene 5 usuarios registrados más el más, los primeros tienen acceso a una página en especial llamada página restringida, esta se ubica en la parte superior derecha del navbar, también esta otra pestaña de usuarios, que muestra los usuarios registrados, esta requiere un permiso en especial y solo la puede ver el usuario3.
+ACTIVIDAD 6
 
-A continuación, el nombre de cada usuario y sus contraseñas para probar la funcionalidad del programa.
-
-USUARIOS CON PERMISO PARA VER PAGINA RESTRINGIDA:
-
-usuario1:martini123 usuario2:martini123 usuario3:martini123 usuario4:martini123
-
-USUARIOS CON PERMISO PARA VER PAGINA RESTRINGIDA Y USUARIOS REGISTRADOS:
-
-usuario5:martini123
-
-SUPERUSUARIO
-
-boris:123
+En la aplicación actual se han creado 2 grupos, el primero con dos usuarios que fueron creados en la página de registro, y el segundo grupo con los usuarios que se habían creado antes. El primer grupo solo tiene acceso a la pagina restringida, mientras que el segundo tiene acceso a la pagina y al listado de usuarios.
+En la pestaña de registro, todos los usuarios que se creen se les dará el grupo1 por defecto.
